@@ -17,8 +17,8 @@ theme = "Hugo-minimalist-theme"
     site_description = "The awesome blog of Brandon McKenna."
     location = "Mercyhurst University"
     # Link custom assets relative to /static
-    avatar = "img/profile-image.png"
-    header_background = "img/desk.jpg"
+    avatar = "img/mckenna.png"
+    header_background = "img/DS_mercy.png"
     header_title = "Customizable header title"
     copyright = "Powered by [Hugo](http://gohugo.io)."
     custom_css = []
