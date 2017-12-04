@@ -1,16 +1,76 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on John Doe&#39;s blog</title>
+    <title>Posts on Brandon McKenna Data Science Blog</title>
     <link>/post/</link>
-    <description>Recent content in Posts on John Doe&#39;s blog</description>
+    <description>Recent content in Posts on Brandon McKenna Data Science Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Powered by [Hugo](http://gohugo.io).</copyright>
-    <lastBuildDate>Sat, 10 Oct 2015 13:07:31 +0200</lastBuildDate>
+    <lastBuildDate>Mon, 04 Dec 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Bar Plots</title>
+      <link>/post/bar-plots/</link>
+      <pubDate>Mon, 04 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/bar-plots/</guid>
+      <description>Last, but not least - I’m going to cover how to create bar plots utilizing datasets within Rstudio.
+First, we needed to install and load the following packages.
+library(Lahman)## Warning: package &amp;#39;Lahman&amp;#39; was built under R version 3.4.3library(sqldf)## Warning: package &amp;#39;sqldf&amp;#39; was built under R version 3.4.3## Loading required package: gsubfn## Warning: package &amp;#39;gsubfn&amp;#39; was built under R version 3.4.3## Loading required package: proto## Warning: package &amp;#39;proto&amp;#39; was built under R version 3.</description>
+    </item>
+    
+    <item>
+      <title>Data Visualization Intructional Series </title>
+      <link>/post/data-visualization-intructional-series/</link>
+      <pubDate>Mon, 04 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/data-visualization-intructional-series/</guid>
+      <description>Welcome! My name is Brandon McKenna. I’ve created this blog as a requirement for my 150 Intro to Data Science course at Mercyhurst University with Dr. Redmond. The purpose of this blog is simple - demonstrating a few simple data visualization techniques using Rstudio and the Lahman data set. Each lesson can be easily replicated, and can help any individual build the foundation for coding. Enjoy!</description>
+    </item>
+    
+    <item>
+      <title>Histograms</title>
+      <link>/post/histograms/</link>
+      <pubDate>Mon, 04 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/histograms/</guid>
+      <description>Histograms have been a crucial tool in data visualization. To demonstrate its value, I will display one can be made through Rstudio.
+First, install and load the Lahman, sqldf, and ggplot2 packages.
+library(Lahman)## Warning: package &amp;#39;Lahman&amp;#39; was built under R version 3.4.3library(sqldf)## Warning: package &amp;#39;sqldf&amp;#39; was built under R version 3.4.3## Loading required package: gsubfn## Warning: package &amp;#39;gsubfn&amp;#39; was built under R version 3.4.3## Loading required package: proto## Warning: package &amp;#39;proto&amp;#39; was built under R version 3.</description>
+    </item>
+    
+    <item>
+      <title>Histograms</title>
+      <link>/post/histograms/</link>
+      <pubDate>Mon, 04 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/histograms/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Scatter Plots</title>
+      <link>/post/scatter-plots/</link>
+      <pubDate>Mon, 04 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/scatter-plots/</guid>
+      <description>Using Lahman and sqldf, we are going to make a scatter plot with homerun and strikeout data. First, install the Lahman, sqldf, and ggplot2 package!
+library(Lahman)## Warning: package &amp;#39;Lahman&amp;#39; was built under R version 3.4.3library(sqldf)## Warning: package &amp;#39;sqldf&amp;#39; was built under R version 3.4.3## Loading required package: gsubfn## Warning: package &amp;#39;gsubfn&amp;#39; was built under R version 3.4.3## Loading required package: proto## Warning: package &amp;#39;proto&amp;#39; was built under R version 3.</description>
+    </item>
+    
+    <item>
+      <title>Time Series</title>
+      <link>/post/time-series/</link>
+      <pubDate>Mon, 04 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/time-series/</guid>
+      <description>Similar to the work we did with scatter plots, time series can compare two data sets to one another. First, we must install and load the same packages as last time.
+library(Lahman)## Warning: package &amp;#39;Lahman&amp;#39; was built under R version 3.4.3library(sqldf)## Warning: package &amp;#39;sqldf&amp;#39; was built under R version 3.4.3## Loading required package: gsubfn## Warning: package &amp;#39;gsubfn&amp;#39; was built under R version 3.4.3## Loading required package: proto## Warning: package &amp;#39;proto&amp;#39; was built under R version 3.</description>
+    </item>
     
     <item>
       <title>Migrate from Jekyll</title>

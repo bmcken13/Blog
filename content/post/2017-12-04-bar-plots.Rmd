@@ -1,0 +1,43 @@
+---
+title: Bar Plots
+author: Brandon McKenna
+date: '2017-12-04'
+slug: bar-plots
+categories: []
+tags: []
+---
+
+Last, but not least - I'm going to cover how to create bar plots utilizing datasets within Rstudio.
+
+First, we needed to install and load the following packages.
+
+```{r}
+library(Lahman)
+library(sqldf)
+library(ggplot2)
+```
+I'm going to use team homerun totals for all the MLB teams in 1980 to create bar plot.
+
+```{r}
+query<-"SELECT name,HR FROM Teams WHERE yearID=1980 ORDER BY HR "
+result<-sqldf(query)
+result$name<-factor(result$name,levels=result$name)
+
+```
+
+Notice something different? The last line is used for saving the results as a factor. Thus, the system knows that the order of the results should not be in alphabetical order. 
+The last line is saving the information as a factor, and letting the system know that the order the results appear in the order we specified, not default alphabetical.
+
+Once we have our data, it's time to create a bar plot. Like histograms, scatterplots and time series - ggplot2 coding is a necessity. 
+
+```{r}
+ggplot()+
+  geom_bar(data=result,aes(x=name,y=HR),stat='identity')+
+  coord_flip()+
+  ggtitle("1980 Team Homerun Totals")+
+  xlab("Team Name")+
+  ylab("Homeruns")
+
+```
+
+There you go, a bar plot! Coding can be much easier than expected. I hope these previous lessons helped. Thanks for tuning in. 

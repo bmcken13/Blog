@@ -1,0 +1,48 @@
+---
+title: Scatter Plots
+author: Brandon McKenna
+date: '2017-12-04'
+slug: scatter-plots
+categories: []
+tags: []
+---
+
+Using Lahman and sqldf, we are going to make a scatter plot with homerun and strikeout data. 
+First, install the Lahman, sqldf, and ggplot2 package!
+
+```{r}
+library(Lahman)
+library(sqldf)
+library(ggplot2)
+```
+
+Next, identify we have to identify our search criteria. In this instance, career homeruns and strikeouts from players who had more than 400 homeruns.
+
+```{r}
+query<-"SELECT playerID,sum(HR),sum(SO)
+FROM Batting 
+GROUP BY playerID
+HAVING sum(HR)>400"
+sqldf(query)
+```
+Saving for future use is helpful!
+
+```{r}
+query<-"SELECT playerID,sum(HR) AS CareerHR,sum(SO) AS CareerSO
+FROM Batting
+GROUP BY playerID
+HAVING sum(HR)>400"
+result<-sqldf(query)
+```
+To create a graph, we will use the ggplot coding. Homeruns will run along the y axis and strikeouts will run along the x axis. 
+
+```{r}
+ggplot()+
+geom_point(data=result,aes(x=CareerSO,y=CareerHR),size=3)+
+ggtitle("Career Strikeouts and Homeruns - The Best")+
+xlab("Career Strikeouts")+
+ylab("Career Homeruns")
+
+```
+
+Congratulations! You've just created a scatter plot using Rstudio. The graphing possibilities are endless if you correctly use the databases. 

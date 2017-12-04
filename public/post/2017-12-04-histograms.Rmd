@@ -1,0 +1,48 @@
+---
+title: Histograms
+author: Brandon McKenna
+date: '2017-12-04'
+slug: histograms
+categories: []
+tags: []
+---
+
+Histograms have been a crucial tool in data visualization. To demonstrate its value, I will display one can be made through Rstudio.
+
+First, install and load the Lahman, sqldf, and ggplot2 packages.
+
+```{r}
+library(Lahman)
+library(sqldf)
+library(ggplot2)
+```
+
+Next, identify the search criteria. In this instance, that would be the weights of MLB players. 
+
+```{r}
+query<-"SELECT weight FROM Master"
+result<-sqldf(query)
+```
+
+Like the other data visualization tools, histograms can be made with the ggplot coding. 
+
+```{r}
+ggplot()+
+  geom_histogram(data=result,aes(x=weight),color="blue",fill="white",bins=60)+
+  ggtitle("Distribution of Baseball Player Bodyweight")+
+  xlab("Weight of player")+
+  ylab("Number of players")
+```
+
+Great! You now have a comprehensive histogram. But, it could be better! To see the difference, adjust the bins. Depending on your needs, adjusting the bins can help your data. But, it does vary depending on those needs.
+
+```{r}
+ggplot()+
+  geom_histogram(data=result,aes(x=weight),color="blue",fill="white",bins=10)+
+  ggtitle("Distribution of Baseball Player Bodyweight")+
+  xlab("Weight of player")+
+  ylab("Number of players")
+
+```
+
+Look! Which one do you like better? Either way, we have created an excellent histogram that reveals patterns in the data.
