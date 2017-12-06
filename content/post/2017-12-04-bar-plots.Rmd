@@ -11,14 +11,14 @@ Last, but not least - I'm going to cover how to create bar plots utilizing datas
 
 First, we needed to install and load the following packages.
 
-```{r}
+```{r message= FALSE, warning= FALSE}
 library(Lahman)
 library(sqldf)
 library(ggplot2)
 ```
 I'm going to use team homerun totals for all the MLB teams in 1980 to create bar plot.
 
-```{r}
+```{r message=FALSE, warning=FALSE}
 query<-"SELECT name,HR FROM Teams WHERE yearID=1980 ORDER BY HR "
 result<-sqldf(query)
 result$name<-factor(result$name,levels=result$name)
@@ -30,7 +30,7 @@ The last line is saving the information as a factor, and letting the system know
 
 Once we have our data, it's time to create a bar plot. Like histograms, scatterplots and time series - ggplot2 coding is a necessity. 
 
-```{r}
+```{r message=FALSE, warning=FALSE }
 ggplot()+
   geom_bar(data=result,aes(x=name,y=HR),stat='identity')+
   coord_flip()+

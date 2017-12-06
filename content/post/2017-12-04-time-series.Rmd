@@ -9,7 +9,7 @@ tags: []
 Similar to the work we did with scatter plots, time series can compare two data sets to one another.
 First, we must install and load the same packages as last time.
 
-```{r}
+```{r message=FALSE, warning=FALSE}
 library(Lahman)
 library(sqldf)
 library(ggplot2)
@@ -17,13 +17,13 @@ library(ggplot2)
 
 The data set we are going to look at this time is Babe Ruth's homeruns over his entire career.
 
-```{r}
+```{r message=FALSE, warning=FALSE}
 query<-"SELECT yearID,HR FROM Batting WHERE playerID='ruthba01'"
 result<-sqldf(query)
 ```
 Next, we are going to put the results into a time series. This method of data visualization is comparable to scatter plots. However, time series presents the data in a time frame. Ultimately, this lends itself to a much more readable experience for an observable. 
 
-```{r}
+```{r message=FALSE, warning=FALSE}
 ggplot()+
   geom_point(data=result,aes(x=yearID,y=HR),size=1/2)+
   geom_line(data=result,aes(x=yearID,y=HR))+

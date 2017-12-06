@@ -10,17 +10,9 @@ tags: []
 
 
 <p>Similar to the work we did with scatter plots, time series can compare two data sets to one another. First, we must install and load the same packages as last time.</p>
-<pre class="r"><code>library(Lahman)</code></pre>
-<pre><code>## Warning: package &#39;Lahman&#39; was built under R version 3.4.3</code></pre>
-<pre class="r"><code>library(sqldf)</code></pre>
-<pre><code>## Warning: package &#39;sqldf&#39; was built under R version 3.4.3</code></pre>
-<pre><code>## Loading required package: gsubfn</code></pre>
-<pre><code>## Warning: package &#39;gsubfn&#39; was built under R version 3.4.3</code></pre>
-<pre><code>## Loading required package: proto</code></pre>
-<pre><code>## Warning: package &#39;proto&#39; was built under R version 3.4.3</code></pre>
-<pre><code>## Loading required package: RSQLite</code></pre>
-<pre class="r"><code>library(ggplot2)</code></pre>
-<pre><code>## Warning: package &#39;ggplot2&#39; was built under R version 3.4.3</code></pre>
+<pre class="r"><code>library(Lahman)
+library(sqldf)
+library(ggplot2)</code></pre>
 <p>The data set we are going to look at this time is Babe Ruth’s homeruns over his entire career.</p>
 <pre class="r"><code>query&lt;-&quot;SELECT yearID,HR FROM Batting WHERE playerID=&#39;ruthba01&#39;&quot;
 result&lt;-sqldf(query)</code></pre>

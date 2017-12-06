@@ -56,17 +56,9 @@
 
             <p>Last, but not least - I’m going to cover how to create bar plots utilizing datasets within Rstudio.</p>
 <p>First, we needed to install and load the following packages.</p>
-<pre class="r"><code>library(Lahman)</code></pre>
-<pre><code>## Warning: package &#39;Lahman&#39; was built under R version 3.4.3</code></pre>
-<pre class="r"><code>library(sqldf)</code></pre>
-<pre><code>## Warning: package &#39;sqldf&#39; was built under R version 3.4.3</code></pre>
-<pre><code>## Loading required package: gsubfn</code></pre>
-<pre><code>## Warning: package &#39;gsubfn&#39; was built under R version 3.4.3</code></pre>
-<pre><code>## Loading required package: proto</code></pre>
-<pre><code>## Warning: package &#39;proto&#39; was built under R version 3.4.3</code></pre>
-<pre><code>## Loading required package: RSQLite</code></pre>
-<pre class="r"><code>library(ggplot2)</code></pre>
-<pre><code>## Warning: package &#39;ggplot2&#39; was built under R version 3.4.3</code></pre>
+<pre class="r"><code>library(Lahman)
+library(sqldf)
+library(ggplot2)</code></pre>
 <p>I’m going to use team homerun totals for all the MLB teams in 1980 to create bar plot.</p>
 <pre class="r"><code>query&lt;-&quot;SELECT name,HR FROM Teams WHERE yearID=1980 ORDER BY HR &quot;
 result&lt;-sqldf(query)

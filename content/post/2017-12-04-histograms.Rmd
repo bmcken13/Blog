@@ -11,7 +11,7 @@ Histograms have been a crucial tool in data visualization. To demonstrate its va
 
 First, install and load the Lahman, sqldf, and ggplot2 packages.
 
-```{r}
+```{r message=FALSE, warning=FALSE}
 library(Lahman)
 library(sqldf)
 library(ggplot2)
@@ -19,14 +19,14 @@ library(ggplot2)
 
 Next, identify the search criteria. In this instance, that would be the weights of MLB players. 
 
-```{r}
+```{r message=FALSE, warning=FALSE}
 query<-"SELECT weight FROM Master"
 result<-sqldf(query)
 ```
 
 Like the other data visualization tools, histograms can be made with the ggplot coding. 
 
-```{r}
+```{r message=FALSE, warning=FALSE}
 ggplot()+
   geom_histogram(data=result,aes(x=weight),color="blue",fill="white",bins=60)+
   ggtitle("Distribution of Baseball Player Bodyweight")+
@@ -36,7 +36,7 @@ ggplot()+
 
 Great! You now have a comprehensive histogram. But, it could be better! To see the difference, adjust the bins. Depending on your needs, adjusting the bins can help your data. But, it does vary depending on those needs.
 
-```{r}
+```{r message=FALSE, warning=FALSE }
 ggplot()+
   geom_histogram(data=result,aes(x=weight),color="blue",fill="white",bins=10)+
   ggtitle("Distribution of Baseball Player Bodyweight")+
