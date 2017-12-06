@@ -71,7 +71,7 @@ Notice something different? The last line is used for saving the results as a fa
         
             <article class="post">
     
-<h1><a href="/post/histograms/" title="Histograms and Introduction">Histograms and Introduction</a></h1>
+<h1><a href="/post/histograms/" title="Histograms">Histograms</a></h1>
 
 <footer class="post-info">Posted on <span class="post-meta"><time datetime="2017.12.04">2017.12.04</time>
 
@@ -80,9 +80,16 @@ Notice something different? The last line is used for saving the results as a fa
 </span>
 </footer>
 
-    <p>Welcome! My name is Brandon McKenna. I’ve created this blog as a requirement for my 150 Intro to Data Science course at Mercyhurst University with Dr. Redmond. The purpose of this blog is simple - demonstrating a few basic data visualization techniques using Rstudio and the Lahman data set. Each lesson can be easily replicated, and can help any individual build the foundation for coding. Enjoy!
-Histograms have been a crucial tool in data visualization.&hellip;</p>
-    <a href="/post/histograms/" title="Histograms and Introduction">Read more &raquo;</a>
+    <p>Histograms have been a crucial tool in data visualization. To demonstrate its value, I will display one can be made through Rstudio.
+First, install and load the Lahman, sqldf, and ggplot2 packages.
+library(Lahman)
+library(sqldf)
+library(ggplot2)
+Next, identify the search criteria. In this instance, that would be the weights of MLB players.
+query&lt;-&quot;SELECT weight FROM Master&quot;
+result&lt;-sqldf(query)
+Like the other data visualization tools, histograms can be made with the ggplot coding.&hellip;</p>
+    <a href="/post/histograms/" title="Histograms">Read more &raquo;</a>
 </article>
 
         
