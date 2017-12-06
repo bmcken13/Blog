@@ -19,7 +19,7 @@ theme = "hugo-minimalist-theme"
     # Link custom assets relative to /static
     avatar = "img/mckenna.png"
     header_background = "img/DS_mercy.png"
-    header_title = "Brandon McKenna Data Science Blog"
+    header_title = "Brandon's Data Science Blog"
     copyright = "Powered by [Hugo](http://gohugo.io)."
     custom_css = []
     custom_js  = []
