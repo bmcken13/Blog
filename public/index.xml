@@ -13,6 +13,18 @@
     
     
     <item>
+      <title>Bar Plots</title>
+      <link>/post/bar-plots/</link>
+      <pubDate>Mon, 04 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/bar-plots/</guid>
+      <description>I’m going to cover how to create bar plots utilizing datasets within Rstudio.
+First, we needed to install and load the following packages.
+library(Lahman)library(sqldf)library(ggplot2)I’m going to use team homerun totals for all the MLB teams in 1980 to create bar plot.
+query&amp;lt;-&amp;quot;SELECT name,HR FROM Teams WHERE yearID=1980 ORDER BY HR &amp;quot;result&amp;lt;-sqldf(query)result$name&amp;lt;-factor(result$name,levels=result$name)Notice something different? The last line is used for saving the results as a factor.</description>
+    </item>
+    
+    <item>
       <title>Histograms and Introduction</title>
       <link>/post/histograms/</link>
       <pubDate>Mon, 04 Dec 2017 00:00:00 +0000</pubDate>
@@ -20,16 +32,6 @@
       <guid>/post/histograms/</guid>
       <description>Welcome! My name is Brandon McKenna. I’ve created this blog as a requirement for my 150 Intro to Data Science course at Mercyhurst University with Dr. Redmond. The purpose of this blog is simple - demonstrating a few basic data visualization techniques using Rstudio and the Lahman data set. Each lesson can be easily replicated, and can help any individual build the foundation for coding. Enjoy!
 Histograms have been a crucial tool in data visualization.</description>
-    </item>
-    
-    <item>
-      <title>Introduction and Bar Plots</title>
-      <link>/post/bar-plots/</link>
-      <pubDate>Mon, 04 Dec 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/post/bar-plots/</guid>
-      <description>Welcome! My name is Brandon McKenna. I’ve created this blog as a requirement for my 150 Intro to Data Science course at Mercyhurst University with Dr. Redmond. The purpose of this blog is simple - demonstrating a few basic data visualization techniques using Rstudio and the Lahman data set. Each lesson can be easily replicated, and can help any individual build the foundation for coding. Enjoy!
-I’m going to cover how to create bar plots utilizing datasets within Rstudio.</description>
     </item>
     
     <item>

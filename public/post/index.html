@@ -46,6 +46,31 @@
         
             <article class="post">
     
+<h1><a href="/post/bar-plots/" title="Bar Plots">Bar Plots</a></h1>
+
+<footer class="post-info">Posted on <span class="post-meta"><time datetime="2017.12.04">2017.12.04</time>
+
+    
+
+</span>
+</footer>
+
+    <p>I’m going to cover how to create bar plots utilizing datasets within Rstudio.
+First, we needed to install and load the following packages.
+library(Lahman)
+library(sqldf)
+library(ggplot2)
+I’m going to use team homerun totals for all the MLB teams in 1980 to create bar plot.
+query&lt;-&quot;SELECT name,HR FROM Teams WHERE yearID=1980 ORDER BY HR &quot;
+result&lt;-sqldf(query)
+result$name&lt;-factor(result$name,levels=result$name)
+Notice something different? The last line is used for saving the results as a factor.&hellip;</p>
+    <a href="/post/bar-plots/" title="Bar Plots">Read more &raquo;</a>
+</article>
+
+        
+            <article class="post">
+    
 <h1><a href="/post/histograms/" title="Histograms and Introduction">Histograms and Introduction</a></h1>
 
 <footer class="post-info">Posted on <span class="post-meta"><time datetime="2017.12.04">2017.12.04</time>
@@ -58,23 +83,6 @@
     <p>Welcome! My name is Brandon McKenna. I’ve created this blog as a requirement for my 150 Intro to Data Science course at Mercyhurst University with Dr. Redmond. The purpose of this blog is simple - demonstrating a few basic data visualization techniques using Rstudio and the Lahman data set. Each lesson can be easily replicated, and can help any individual build the foundation for coding. Enjoy!
 Histograms have been a crucial tool in data visualization.&hellip;</p>
     <a href="/post/histograms/" title="Histograms and Introduction">Read more &raquo;</a>
-</article>
-
-        
-            <article class="post">
-    
-<h1><a href="/post/bar-plots/" title="Introduction and Bar Plots">Introduction and Bar Plots</a></h1>
-
-<footer class="post-info">Posted on <span class="post-meta"><time datetime="2017.12.04">2017.12.04</time>
-
-    
-
-</span>
-</footer>
-
-    <p>Welcome! My name is Brandon McKenna. I’ve created this blog as a requirement for my 150 Intro to Data Science course at Mercyhurst University with Dr. Redmond. The purpose of this blog is simple - demonstrating a few basic data visualization techniques using Rstudio and the Lahman data set. Each lesson can be easily replicated, and can help any individual build the foundation for coding. Enjoy!
-I’m going to cover how to create bar plots utilizing datasets within Rstudio.&hellip;</p>
-    <a href="/post/bar-plots/" title="Introduction and Bar Plots">Read more &raquo;</a>
 </article>
 
         
