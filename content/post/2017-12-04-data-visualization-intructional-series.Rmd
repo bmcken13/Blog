@@ -7,4 +7,4 @@ categories: []
 tags: []
 ---
 
-Welcome! My name is Brandon McKenna. I've created this blog as a requirement for my 150 Intro to Data Science course at Mercyhurst University with Dr. Redmond. The purpose of this blog is simple - demonstrating a few simple data visualization techniques using Rstudio and the Lahman data set. Each lesson can be easily replicated, and can help any individual build the foundation for coding. Enjoy!
+Welcome! My name is Brandon McKenna. I've created this blog as a requirement for my 150 Intro to Data Science course at Mercyhurst University with Dr. Redmond. The purpose of this blog is simple - demonstrating a few basic data visualization techniques using Rstudio and the Lahman data set. Each lesson can be easily replicated, and can help any individual build the foundation for coding. Enjoy!
